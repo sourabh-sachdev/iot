@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<head>
+	<!-- templatemo 418 form pack -->
+    <!-- 
+    Form Pack
+    http://www.templatemo.com/preview/templatemo_418_form_pack 
+    -->
+	<title>Create Account</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+	<link href="css/templatemo_style.css" rel="stylesheet" type="text/css">	
+	
+<script> 
+          
+            // Function to check Whether both passwords 
+            // is same or not. 
+            function checkPassword(form) { 
+                password1 = form.password1.value; 
+                password2 = form.password2.value; 
+  
+                // If password not entered 
+                if (password1 == '') 
+                    alert ("Please enter Password"); 
+                      
+                // If confirm password not entered 
+                else if (password2 == '') 
+                    alert ("Please enter confirm password"); 
+                      
+                // If Not same return False.     
+                else if (password1 != password2) { 
+                    alert ("\nPassword did not match: Please try again...") 
+                    return false; 
+                } 
+  
+                // If same return True. 
+                else{ 
+                    alert("Password Match: Welcome !") 
+                    return true; 
+                } 
+            } 
+        </script> 
+       
+</head>
+<body class="templatemo-bg-gray">
+	<h1 class="margin-bottom-15">Add your Data</h1>
+	<div class="container">
+		<div class="col-md-12">			
+			<form class="form-horizontal templatemo-create-account templatemo-container" role="form" action="addData.jsp" method="post"  onSubmit="return checkPassword(this)">
+				<div class="form-inner">
+				<div class="form-group">
+                        <div class="col-md-12">		          	
+                          <label for="username" class="control-label">Doctor Username</label>
+                          <input type="text" class="form-control" id="username" placeholder="" name="username" required>		            		            		            
+                        </div>              
+                      </div>
+					<div class="form-group">
+                        <div class="col-md-12">		          	
+                          <label for="name" class="control-label"> Dr Name</label>
+                          <input type="text" class="form-control" id="name" placeholder="" name="drname" />
+                          		            		            		            
+                        </div>              
+                      </div>	
+			          
+                   <div class="form-group">
+                        <div class="col-md-12">		          	
+                          <label for="username" class="control-label">Patient Name</label>
+                          <input type="text" class="form-control" id="pname" placeholder="" name="pname" required>		            		            		            
+                        </div>              
+                      </div>
+                    <div class="form-group">
+			          <div class="col-md-12">		          	
+			            <label for="username" class="control-label">Username</label>
+			            <input type="text" class="form-control" id="username" placeholder="" name="pusername" required>		            		            		            
+			          </div>  	
+			         </div> 
+			        <div class="form-group">
+			          <div class="col-md-12">		          	
+			            <label for=" Phone no" class="control-label"> Phone no</label>
+			            <input type="number" class="form-control" id=" phone" placeholder="" name="pphone" required>		            		            		            
+			          </div>              
+                    </div>			
+                    
+			        
+			          <div class="form-group">
+                        <div class="col-md-12">		          	
+                          <label for=" temprature" class="control-label">Temperature </label>
+                          <input type="text" class="form-control" id=" temprature" placeholder="" name="temp">		            		            		            
+                        </div>              
+                      </div>
+                      <div class="form-group">
+                        <div class="col-md-12">		          	
+                          <label for="pulse" class="control-label">  Pulse</label>
+                          <input type="text" class="form-control" id="pulse" placeholder="" name="pulse" >		            		            		            
+                        </div>              
+                      </div>		 
+                      <div class="form-group">
+                        <div class="col-md-12">		          	
+                          <label for="oxygen" class="control-label">  Oxygen</label>
+                          <input type="text" class="form-control" id="oxygen" placeholder="" name="oxygen">		            		            		            
+                        </div>              
+                      </div>		
+			          <div class="col-md-6 templatemo-radio-group">
+			          	<label class="radio-inline">
+		          			<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" name="gender"> Male
+		          		</label>
+		          		<label class="radio-inline">
+		          			<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" name="gender"> Female
+		          		</label>
+			          </div>             
+			        </div> 
+			       <!--  <div class="form-group">
+			          <div class="col-md-6">
+			            <label for="password" class="control-label">Password</label>
+			            <input type="password" class="form-control" id="password"  name="password1" placeholder="" required>
+			          </div>
+			          <div class="col-md-6">
+			            <label for="password" class="control-label">Confirm Password</label>
+			            <input type="password" class="form-control" id="password_confirm" name="password2" placeholder="" required>
+			          </div>
+			        </div> -->
+			        <div class="form-group">
+			          <div class="col-md-12">
+			            <label><input type="checkbox">I agree to the <a href="javascript:;" data-toggle="modal" data-target="#templatemo_modal">Terms of Service</a> and <a href="#">Privacy Policy.</a></label>
+			          </div>
+			        </div>
+			        <div class="form-group">
+			          <div class="col-md-12">
+			            <input type="submit" value="Submit" class="btn btn-info">
+			            <!--  <a href="login-1.html" class="pull-right"></a>-->
+			          </div>
+			        </div>	
+				</div>				    	
+		      </form>		      
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="templatemo_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Terms of Service</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<p>This form is provided by <a rel="nofollow" href="http://www.templatemo.com/page/1">Free HTML5 Templates</a> that can be used for your websites. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+	        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+	        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
